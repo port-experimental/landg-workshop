@@ -1,0 +1,24 @@
+{
+    "identifier": "retail_app_foo",
+    "title": "Retail App Foo",
+    "icon": "Microservice",
+    "properties": {
+      "applicationid": "1234",
+      "name": "AppBench",
+      "applicationshortcode": "apboe01",
+      "productowner": "sebastien+onboarding@getport.io",
+      "scrummaster": "sebastien+onboarding@getport.io",
+      "testlead": "sebastien+onboarding@getport.io",
+      "releasemanager": "sebastien+onboarding@getport.io",
+      "costcentre": "NCE5",
+      "applicationsupportgroup": "UK Protection Cloud Platform Team",
+      "infrastructuresupportgroup": "UK Protection Cloud Platform Team",
+      "department": "IT",
+      "appnumber": "1234",
+      "lean_ix_id": "1234",
+      "apptio_id": "1234"
+    },
+    "relations": {
+      "lg_shared_bu": "all_teams"
+    }
+  }
