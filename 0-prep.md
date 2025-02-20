@@ -327,3 +327,8 @@ Repeat the same process for this blueprint :
     }
   }
   ```
+
+  And now let's add to sample entities, go to "Catalog" and select "Retail Applications"  : 
+
+  ![](images/entity1.png)
+
