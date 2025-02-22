@@ -5,9 +5,15 @@ nav: true
 
 # Workshop Prep
 
+## Accessing your Port account
+
+* Grab an account from the Google Sheet and put your name in the column "owner".
+* Go to app.getport.io and log in.
+* Follow the instructions from the instructor for the onboarding flow.
+
 ## Import the blueprints
 
-Go to the Builder and click the `+ Blueprint` button :  
+Go to the Builder and click the `+ Blueprint` button :
 
 ![](images/blueprint1.png)
 
@@ -17,7 +23,8 @@ Then click the `{...} Edit JSON` button :
 
 Paste this json content : 
 
-```
+```javascript
+
 {
     "identifier": "rt_appben_retail_apps",
     "description": "Captures essential info about retail applications and services, including both external and internal apps supporting business operations.",
@@ -332,3 +339,57 @@ Repeat the same process for this blueprint :
 
   ![](images/entity1.png)
 
+Enable "Json Mode" and paste the following content : 
+
+```
+{
+    "identifier": "retail_app_foo",
+    "title": "Retail App Foo",
+    "icon": "Microservice",
+    "properties": {
+      "applicationid": "1234",
+      "name": "AppBench",
+      "applicationshortcode": "apboe01",
+      "productowner": "sebastien+onboarding@getport.io",
+      "scrummaster": "sebastien+onboarding@getport.io",
+      "testlead": "sebastien+onboarding@getport.io",
+      "releasemanager": "sebastien+onboarding@getport.io",
+      "costcentre": "NCE5",
+      "applicationsupportgroup": "UK Protection Cloud Platform Team",
+      "infrastructuresupportgroup": "UK Protection Cloud Platform Team",
+      "department": "IT",
+      "appnumber": "1234",
+      "lean_ix_id": "1234",
+      "apptio_id": "1234"
+    },
+    "relations": {
+      "lg_shared_bu": "all_teams"
+    }
+  }
+  ```
+
+  Repeat the same process for this content : 
+
+  ```
+  {
+    "identifier": "request_firewall_rule_sample",
+    "title": "Request Firewall Rule Sample",
+    "icon": "DefaultBlueprint",
+    "properties": {
+      "source_ip_address": "192.168.1.0",
+      "source_cidr_notation": "/26",
+      "source_port": "HTTPS: 443",
+      "destination_ip_address": "192.168.11.0",
+      "destination_cidr_notation": "/26",
+      "destination_port": "HTTPS: 443",
+      "status": "Pending",
+      "infosec_approval": "Pending Approval",
+      "network_approval": "Pending Approval",
+      "architecture_approval": "Pending Approval",
+      "action": "Allow"
+    },
+    "relations": {
+      "rt_appben_retail_apps": "retail_app_foo"
+    }
+  }
+  ```

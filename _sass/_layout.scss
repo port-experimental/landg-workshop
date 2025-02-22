@@ -66,8 +66,7 @@
     }
 
     .trigger {
-      clear: both;
-      display: none;
+      width: max-content;
     }
 
     &:hover .trigger {
