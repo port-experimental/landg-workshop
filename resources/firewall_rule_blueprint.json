@@ -1,7 +1,7 @@
 {
     "identifier": "rt_appben_firewall_rules",
     "description": "Captures and displays essential information about firewall rules controlling network traffic between applications.",
-    "title": "Firewall Rules",
+    "title": "Firewall Rule",
     "icon": "FireHydrant",
     "schema": {
       "properties": {

@@ -13,6 +13,8 @@ nav: true
 
 ## Import the blueprints
 
+### Retail Application Blueprint
+
 Go to the Builder and click the `+ Blueprint` button :
 
 ![](images/blueprint1.png)
@@ -23,12 +25,11 @@ Then click the `{...} Edit JSON` button :
 
 Paste this json content : 
 
-```javascript
-
+```
 {
     "identifier": "rt_appben_retail_apps",
     "description": "Captures essential info about retail applications and services, including both external and internal apps supporting business operations.",
-    "title": "Retail Applications",
+    "title": "Retail Application",
     "icon": "Microservice",
     "schema": {
       "properties": {
@@ -86,23 +87,6 @@ Paste this json content :
           "title": "Infrastructure Support Group",
           "icon": "Organization"
         },
-        "department": {
-          "title": "Department",
-          "icon": "Organization",
-          "type": "string",
-          "enum": [
-            "RP",
-            "GP",
-            "IT",
-            "DO"
-          ],
-          "enumColors": {
-            "RP": "lightGray",
-            "GP": "lightGray",
-            "IT": "lightGray",
-            "DO": "lightGray"
-          }
-        },
         "appnumber": {
           "type": "string",
           "title": "App Number",
@@ -137,6 +121,11 @@ Paste this json content :
     }
   }
   ```
+  
+One property is missing `department` , it's an enum with the following possible value : `RP`, `GP`, `IT`,`DO`. Use the UI to add this field.
+
+
+### Firewall rule blueprint
 
 Repeat the same process for this blueprint : 
 
@@ -144,7 +133,7 @@ Repeat the same process for this blueprint :
 {
     "identifier": "rt_appben_firewall_rules",
     "description": "Captures and displays essential information about firewall rules controlling network traffic between applications.",
-    "title": "Firewall Rules",
+    "title": "Firewall Rule",
     "icon": "FireHydrant",
     "schema": {
       "properties": {
@@ -323,8 +312,16 @@ Repeat the same process for this blueprint :
     },
     "mirrorProperties": {},
     "calculationProperties": {},
-    "aggregationProperties": {},
-    "relations": {
+    "aggregationProperties": {}
+  }
+  ```
+
+### Adding a relation
+
+We have now 2 blueprints, `Retail Application` and `Firewall rule`. There need to be a relationship between those 2, the ownership of the relation will be on the `Firwall rule` , you can try to add it with the ui or directly by updating the JSON of the blueprint : 
+
+```
+  "relations": {
       "rt_appben_retail_apps": {
         "title": "Retail Application",
         "target": "rt_appben_retail_apps",
@@ -332,10 +329,13 @@ Repeat the same process for this blueprint :
         "many": false
       }
     }
-  }
-  ```
+```
 
-  And now let's add to sample entities, go to "Catalog" and select "Retail Applications"  : 
+
+## Sample entities
+
+
+Now let's add some sample entities, go to "Catalog" and select "Retail Applications"  : 
 
   ![](images/entity1.png)
 
@@ -393,3 +393,7 @@ Enable "Json Mode" and paste the following content :
     }
   }
   ```
+
+  You can try to add more entities, try adding one using the UI directly. One thing to keep in mind is that usually we won't be creating entities manually, here it's for demo purposes. In reality, entities are created by exporters or by automations/SSAs. 
+
+  

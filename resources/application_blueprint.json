@@ -1,7 +1,7 @@
 {
     "identifier": "rt_appben_retail_apps",
     "description": "Captures essential info about retail applications and services, including both external and internal apps supporting business operations.",
-    "title": "Retail Applications",
+    "title": "Retail Application",
     "icon": "Microservice",
     "schema": {
       "properties": {
