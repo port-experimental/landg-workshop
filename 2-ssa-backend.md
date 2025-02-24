@@ -75,7 +75,46 @@ First thing that you notice is that we have a property called `application_name`
 Modify your SSA, so that you are able to select an `rt_appben_retail_apps` entity and the property should have the name `application_name`.
 
 
+## Adding FW Rules to the catalog
 
+Once you get your SSA working, you want to have visibility on the FW Rules that you have added. Usually you would have a Port exporter polling the backend and sending it back to Port. 
+
+Another approach could creating an automation that gets triggered when an action runs successfully. Try to implement this approach. 
+
+Use this as source of inspiration, you will have to update the mapping section : 
+
+```
+{
+  "identifier": "create_firewall_rule_entity",
+  "title": "Create Firewall Rule Entity",
+  "icon": "Firewall",
+  "description": "Creates a firewall rule entity when the create_firewall_rule action is completed",
+  "trigger": {
+    "type": "automation",
+    "event": {
+      "type": "RUN_UPDATED",
+      "actionIdentifier": "create_firewall_rule"
+    }
+  },
+  "invocationMethod": {
+    "type": "UPSERT_ENTITY",
+    "blueprintIdentifier": "firewall_rule",
+    "mapping": {
+      "identifier": "{{ .trigger.payload.properties.rule_id }}",
+      "title": "{{ .trigger.payload.properties.rule_name }}",
+      "properties": {
+        "rule_id": "{{ .trigger.payload.properties.rule_id }}",
+        "source_ip": "{{ .trigger.payload.properties.source_ip }}",
+        "destination_ip": "{{ .trigger.payload.properties.destination_ip }}",
+        "port": "{{ .trigger.payload.properties.port }}",
+        "protocol": "{{ .trigger.payload.properties.protocol }}"
+      }
+    }
+  },
+  "publish": true
+}
+
+```
 
 
 

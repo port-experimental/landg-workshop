@@ -15,4 +15,8 @@ Here you can reuse most of the `Create` Action, the http method of the Webhook w
 
 This one will probably contain just one field where we select the FW rule we want to delete. 
 
+## Keeping in sync the entities
+
+You want to make sure to keep in sync your catalog, you can use the same approach as in section 2 (create an automation triggered by an action run).
+
 
