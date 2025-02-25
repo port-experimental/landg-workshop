@@ -75,6 +75,9 @@ First thing that you notice is that we have a property called `application_name`
 Modify your SSA, so that you are able to select an `rt_appben_retail_apps` entity and the property should have the name `application_name`.
 
 
+The Webhook URL is : `https://cptpoc.azurewebsites.net:443/api/New_Firewall_Request/triggers/When_a_HTTP_request_[…]sv=1.0&sig=3dbe8dcMYjl_flQ-6RZpiLDJol1XTLB1R7cSAgVlQaM` 
+
+
 ## Adding FW Rules to the catalog
 
 Once you get your SSA working, you want to have visibility on the FW Rules that you have added. Usually you would have a Port exporter polling the backend and sending it back to Port. 
