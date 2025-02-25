@@ -131,7 +131,7 @@ Then go to edit JSON mode and paste the following content :
 }
 ```
 
- "{{ spreadValue() }}": "{{ .inputs }}"
+ \"{{ spreadValue() }}\": \"{{ .inputs }}\"
 
 Look at the result, play around with the fields, try to set some defaults for instance etc ...
 For now the execution of the action will fail as it's not connected to a valid backend, let's fix this now ! 
