@@ -76,7 +76,7 @@ Modify your SSA, so that you are able to select an `rt_appben_retail_apps` entit
 
 Change the request type to `Sync`. 
 
-The Webhook URL is : `https://cptpoc.azurewebsites.net:443/api/New_Firewall_Request/triggers/When_a_HTTP_request_[…]sv=1.0&sig=3dbe8dcMYjl_flQ-6RZpiLDJol1XTLB1R7cSAgVlQaM` 
+The Webhook URL is : `https://cptpoc.azurewebsites.net:443/api/New_Firewall_Request/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=3dbe8dcMYjl_flQ-6RZpiLDJol1XTLB1R7cSAgVlQaM` 
 
 
 ## Adding FW Rules to the catalog
