@@ -368,7 +368,7 @@ Enable "Json Mode" and paste the following content :
   }
   ```
 
-  Repeat the same process for this content : 
+  Repeat the same process for this content, using the Firewall Rule Catalog : 
 
   ```
   {
