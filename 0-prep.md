@@ -7,7 +7,7 @@ nav: true
 
 ## Accessing your Port account
 
-* Grab an account from the Google Sheet and put your name in the column "owner".
+* Grab an account from the [Google Sheet](https://docs.google.com/spreadsheets/d/1dml6jWrv1o_iOTd2KHulYw3vEI1W6c83UyevZyzQ31Y/edit?usp=sharing) and put your name in the column "owner".
 * Go to app.getport.io and log in.
 * Follow the instructions from the instructor for the onboarding flow.
 
@@ -396,4 +396,4 @@ Enable "Json Mode" and paste the following content :
 
   You can try to add more entities, try adding one using the UI directly. One thing to keep in mind is that usually we won't be creating entities manually, here it's for demo purposes. In reality, entities are created by exporters or by automations/SSAs. 
 
-  
+
